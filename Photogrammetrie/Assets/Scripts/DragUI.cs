@@ -6,26 +6,26 @@ public class DragUI : MonoBehaviour
 {
     public float rotationSpeed = 2f;
 
-    [SerializeField] private GameObject hammer;
+    [SerializeField] private GameObject Fishermans;
 
     [SerializeField] private bool rotateRight;
     [SerializeField] private bool rotateLeft;
 
     void Start()
     {
-        hammer = GameObject.Find("Hammer_Low");
+        Fishermans = GameObject.Find("Fishermans");
     }
 
     private void Update()
     {
         if (rotateRight)
         {
-            hammer.transform.Rotate(Vector3.right, rotationSpeed, Space.World);
+            Fishermans.transform.Rotate(Vector3.right, rotationSpeed, Space.World);
         }
 
         if (rotateLeft)
         {
-            hammer.transform.Rotate(Vector3.left, rotationSpeed, Space.World);
+            Fishermans.transform.Rotate(Vector3.left, rotationSpeed, Space.World);
         }
     }
 
